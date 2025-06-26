@@ -127,12 +127,12 @@ export const userData = async (req, res) => {
         message: "User not found",
       });
     }
-    
+
     return res.status(200).json({
-        success:true,
-        message:"User found",
-        user
-    })
+      success: true,
+      message: "User found",
+      user,
+    });
   } catch (error) {
     return res.status(400).json({
       success: false,
@@ -141,31 +141,171 @@ export const userData = async (req, res) => {
   }
 };
 
-export const resetPassword = async (req, res) =>{
-    try{
-      const email = req.body.email;
-      if(!email){
-        return res.status(400).json({
-            success:false,
-            message:"Email is required",
-        })
-      }
-
-      const user = await userModel.findOne({email})
-      if(!user){
-        return res.status(400).json({
-            success:false,
-            message:"User not found",
-        })
-      }
-      console.log(user)
-
-
+export const validateResetPasswordEmail = async (req, res) => {
+  try {
+    const email = req.body.email;
+    if (!email) {
+      return res.status(400).json({
+        success: false,
+        message: "Email is required",
+      });
     }
-    catch(error){
-        return res.status(400).json({
-            success: false,
-            message: `Internal server error ${error.message}`,
-        })
+
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
     }
-}
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    const otpExpires = new Date(Date.now() + 5 * 60 * 1000);
+
+    user.resetPasswordOTP = otp;
+    user.resetPasswordOTPExpires = otpExpires;
+
+    const emailData = {
+      email_id: email,
+      subject: "Reset Password OTP",
+      text: `Your reset password OTP is ${otp}`,
+      html: `<p>Your reset password OTP is <b>${otp}</b> </p> <p>This OTP will expire in 5 minutes</p>`,
+    };
+
+    const emailResponse = await sendEmail(emailData);
+    if (!emailResponse.success) {
+      return res.status(400).json({
+        success: false,
+        message: "Failed to send OTP",
+      });
+    }
+
+    await user.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "OTP sent successfully",
+      otpExpires,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      success: false,
+      message: `Internal server error ${error.message}`,
+    });
+  }
+};
+
+export const validateResetPasswordOTP = async (req, res) => {
+  try {
+    const { email, otp } = req.body;
+    if (!email || !otp) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and OTP are required",
+      });
+    }
+
+    const user = await userModel
+      .findOne({ email })
+      .select("+resetPasswordOTP +resetPasswordOTPExpires");
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    if (user.resetPasswordOTPExpires < Date.now()) {
+      user.resetPasswordOTP = null;
+      await user.save();
+      return res.status(400).json({
+        success: false,
+        message: "OTP expired",
+      });
+    }
+    if (user.resetPasswordOTP !== otp) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid OTP",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "OTP validated successfully",
+    });
+  } catch (error) {
+    return res.status(400).json({
+      success: false,
+      message: `Internal server error ${error.message}`,
+    });
+  }
+};
+
+export const resetPassword = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and password are required",
+      });
+    }
+
+    const user = await userModel
+      .findOne({ email })
+      .select("+password +resetPasswordOTP +resetPasswordOTPExpires");
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    if (
+      user.resetPasswordOTPExpires < Date.now() ||
+      user.resetPasswordOTP === null
+    ) {
+      user.resetPasswordOTP = null;
+      await user.save();
+      return res.status(400).json({
+        success: false,
+        message: "OTP expired, Please Resend OTP",
+      });
+    }
+
+    const decryptedPassword = await bcrypt.compare(password, user.password);
+
+    if (decryptedPassword) {
+      return res.status(400).json({
+        success: false,
+        message: "New password cannot be same as old password",
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    user.password = hashedPassword;
+    user.resetPasswordOTP = null;
+
+    await user.save();
+
+    const emailData = {
+      email_id: email,
+      subject: "Password Changed Successfully",
+      text: `Your password has been changed successfully`,
+      html: `<p>Your password for <b>BazaarWale</b> has been changed successfully</p>`,
+    };
+
+    await sendEmail(emailData);
+
+    return res.status(200).json({
+      success: true,
+      message: "Password Changed successfully",
+    });
+  } catch (error) {
+    return res.status(400).json({
+      success: false,
+      message: `Internal server error ${error.message}`,
+    });
+  }
+};
