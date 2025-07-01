@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./mongodb/database.js";
 import authRouter from "./routes/authRoutes.js";
+import contactRouter from "./routes/contactRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -20,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("API is Running");
 });
 app.use("/api/auth", authRouter);
-
+app.use("/api", contactRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
