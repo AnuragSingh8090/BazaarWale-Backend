@@ -59,8 +59,8 @@ export const register = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       success: false,
-      message: `Internal server error`,
-      error: error.message.split(":").at(-1).trim(),
+      error: `Internal server error`,
+      message: error.message.split(":").at(-1).trim(),
     });
   }
 };
@@ -74,21 +74,23 @@ export const login = async (req, res) => {
         .json({ success: false, message: "All fields are required" });
     }
     const user = await userModel.findOne({ email }).select("+password");
-    const safeUser = await userModel
-      .findById(user._id.toString())
-      .select("-password -__v -createdAt -updatedAt");
 
     if (!user) {
       return res
         .status(400)
         .json({ success: false, message: "User not Registered" });
     }
+
     const isPasswordMatch = await bcrypt.compare(password, user.password);
     if (!isPasswordMatch) {
       return res
         .status(400)
         .json({ success: false, message: "Invalid Password" });
     }
+
+    const safeUser = await userModel
+      .findById(user._id.toString())
+      .select("-password -__v -createdAt -updatedAt");
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
@@ -103,7 +105,8 @@ export const login = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       success: false,
-      message: `Internal server error ${error.message}`,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
     });
   }
 };
@@ -136,7 +139,8 @@ export const userData = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: `Internal server error ${error.message}`,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
     });
   }
 };
@@ -189,7 +193,8 @@ export const validateResetPasswordEmail = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: `Internal server error ${error.message}`,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
     });
   }
 };
@@ -236,7 +241,8 @@ export const validateResetPasswordOTP = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: `Internal server error ${error.message}`,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
     });
   }
 };
@@ -305,7 +311,8 @@ export const resetPassword = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       success: false,
-      message: `Internal server error ${error.message}`,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
     });
   }
 };

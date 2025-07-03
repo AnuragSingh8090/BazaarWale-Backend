@@ -10,8 +10,9 @@ dotenv.config();
 const app = express();
 connectDB();
 
+const allowedOrigins = ["http://localhost:5173"];
 // Middleware
-app.use(cors({ credentials: true }));
+app.use(cors({ credentials: true, origin: allowedOrigins }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

@@ -38,7 +38,8 @@ export const contactUs = async (req, res) => {
     catch(error){
         return res.status(400).json({
             success:false,
-            message: `Internal server error ${error.message}`,
+            error: `Internal server error ${error.message}`,
+            message: "Something went wrong",
         })
     }
 }
