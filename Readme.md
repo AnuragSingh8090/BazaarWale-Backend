@@ -32,7 +32,7 @@ POST /api/contact
     "name" : "Anurag",
     "email" : "techboy9797@gmail.com",
     "mobile" : "8090674532",
-    "messages" : "This is Test Message"
+    "message" : "This is Test Message"
 }
 
 
