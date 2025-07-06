@@ -10,7 +10,10 @@ dotenv.config();
 const app = express();
 connectDB();
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://bazaarwale.netlify.app",
+];
 // Middleware
 app.use(cors({ credentials: true, origin: allowedOrigins }));
 app.use(express.json());
