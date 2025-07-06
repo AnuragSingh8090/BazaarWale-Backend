@@ -14,7 +14,7 @@ POST /api/auth/register
 }
 
 
-<-- login API (Before Login No Authorization Token Required)-->
+<-- login API (Before Login No Authorization Token Required)--> //Mobile No login Pending
 
 POST /api/auth/login
 
@@ -36,6 +36,15 @@ POST /api/contact
 }
 
 
+<-- newsletter API (Before and After Login No Authorization Token Required) -->
+
+POST /api/newsletter
+
+{
+    "email" : "techboy9797@gmail.com",
+}
+
+
 <-- user data API (After Login Authorization Token Required)-->
 
 GET /api/auth/userdata
@@ -45,7 +54,7 @@ GET /api/auth/userdata
 }
 
 
-<-- Reset Password API (Before Login No Authorizatio Token Required)-->
+<-- Reset Password API (Before Login No Authorizatio Token Required)--> //Mobile no Validation is pending
 
 <-- Step 1 (Validate User Email Id) -->
 POST /api/auth/validateresetpasswordemail
@@ -61,7 +70,7 @@ POST /api/auth/validateresetpasswordotp
 }
 
 <-- Step 3 (Reset Password) -->
-POST /api/auth/validateresetpasswordotp
+POST /api/auth/resetpassword
 {
     "email" : "anuragkumar@gmail.com",
     "password" : "test@1234"

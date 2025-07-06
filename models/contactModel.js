@@ -43,6 +43,6 @@ const contactSchema = new mongoose.Schema({
     }
 },{timestapms:true})
 
-const contactModel = mongoose.model('contact', contactSchema)
+const contactModel = mongoose.model.contact || mongoose.model('contact', contactSchema)
 
 export default contactModel

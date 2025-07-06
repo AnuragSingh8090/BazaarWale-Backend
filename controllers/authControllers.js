@@ -59,7 +59,7 @@ export const register = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       success: false,
-      error: `Internal server error`,
+      error: `Internal server error ${error}`,
       message: error.message.split(":").at(-1).trim(),
     });
   }
