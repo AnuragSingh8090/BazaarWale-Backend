@@ -197,7 +197,7 @@ export const userDataBasic = async (req, res) => {
         name : user.name,
         email : user.email,
         cart : user.cart,
-        userId : _id
+        userId : user._id
       },
     });
   } catch (error) {
