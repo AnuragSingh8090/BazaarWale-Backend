@@ -42,6 +42,8 @@ export const register = async (req, res) => {
       expiresIn: "1h",
     });
 
+    const safeUser = await userModel.findOne({email})
+
     const emailData = {
       email_id: email,
       subject: "Account Created Successfully",
@@ -49,12 +51,18 @@ export const register = async (req, res) => {
       html: `<b>Hi ${name}, Your account on BazaarWala has been created successfully</b>`,
     };
 
-    const response = await sendEmail(emailData);
+     await sendEmail(emailData);
 
     return res.status(201).json({
       success: true,
       message: "User Registered Successfully",
       token,
+      user: {
+        name : safeUser.name,
+        email : safeUser.email,
+        userId : safeUser._id,
+        cart : safeUser.cart
+      },
     });
   } catch (error) {
     return res.status(500).json({
@@ -112,7 +120,12 @@ export const login = async (req, res) => {
       success: true,
       message: "Login Successfully",
       token,
-      user: safeUser,
+      user: {
+        name : safeUser.name,
+        email : safeUser.email,
+        userId : safeUser._id,
+        cart : safeUser.cart
+      },
     });
   } catch (error) {
     return res.status(500).json({
