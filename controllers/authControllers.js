@@ -73,7 +73,19 @@ export const login = async (req, res) => {
         .status(400)
         .json({ success: false, message: "All fields are required" });
     }
-    const user = await userModel.findOne({ email }).select("+password");
+
+    let user;
+
+    if (typeof email === "string" && email.includes("@")) {
+      user = await userModel.findOne({ email }).select("+password");
+    } else if (typeof email === "string" && /^\d{10}$/.test(email.trim())) {
+      const mobile = Number(email.trim());
+      user = await userModel.findOne({ mobile }).select("+password");
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid Email or Mobile" });
+    }
 
     if (!user) {
       return res
@@ -151,11 +163,23 @@ export const validateResetPasswordEmail = async (req, res) => {
     if (!email) {
       return res.status(400).json({
         success: false,
-        message: "Email is required",
+        message: "Email or Mobile required",
       });
     }
 
-    const user = await userModel.findOne({ email });
+    let user;
+
+    if (typeof email === "string" && email.includes("@")) {
+      user = await userModel.findOne({ email });
+    } else if (typeof email === "string" && /^\d{10}$/.test(email.trim())) {
+      const mobile = Number(email.trim());
+      user = await userModel.findOne({ mobile });
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid Email or Mobile" });
+    }
+
     if (!user) {
       return res.status(400).json({
         success: false,
@@ -169,7 +193,7 @@ export const validateResetPasswordEmail = async (req, res) => {
     user.resetPasswordOTPExpires = otpExpires;
 
     const emailData = {
-      email_id: email,
+      email_id: user.email,
       subject: "Reset Password OTP",
       text: `Your reset password OTP is ${otp}`,
       html: `<p>Your reset password OTP is <b>${otp}</b> </p> <p>This OTP will expire in 5 minutes</p>`,
@@ -187,7 +211,7 @@ export const validateResetPasswordEmail = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      message: "OTP sent successfully",
+      message: `OTP has sent to ${user.email} `,
       otpExpires,
     });
   } catch (error) {
@@ -209,9 +233,23 @@ export const validateResetPasswordOTP = async (req, res) => {
       });
     }
 
-    const user = await userModel
-      .findOne({ email })
-      .select("+resetPasswordOTP +resetPasswordOTPExpires");
+    let user;
+
+    if (typeof email === "string" && email.includes("@")) {
+      user = await userModel
+        .findOne({ email })
+        .select("+resetPasswordOTP +resetPasswordOTPExpires");
+    } else if (typeof email === "string" && /^\d{10}$/.test(email.trim())) {
+      const mobile = Number(email.trim());
+      user = await userModel
+        .findOne({ mobile })
+        .select("+resetPasswordOTP +resetPasswordOTPExpires");
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid Email or Mobile" });
+    }
+
     if (!user) {
       return res.status(400).json({
         success: false,
@@ -256,10 +294,23 @@ export const resetPassword = async (req, res) => {
         message: "Email and password are required",
       });
     }
+    let user;
 
-    const user = await userModel
-      .findOne({ email })
-      .select("+password +resetPasswordOTP +resetPasswordOTPExpires");
+    if (typeof email === "string" && email.includes("@")) {
+      user = await userModel
+        .findOne({ email })
+        .select("+password +resetPasswordOTP +resetPasswordOTPExpires");
+    } else if (typeof email === "string" && /^\d{10}$/.test(email.trim())) {
+      const mobile = Number(email.trim());
+      user = await userModel
+        .findOne({ mobile })
+        .select("+password +resetPasswordOTP +resetPasswordOTPExpires");
+    } else {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid Email or Mobile" });
+    }
+
     if (!user) {
       return res.status(400).json({
         success: false,
