@@ -170,6 +170,45 @@ export const userData = async (req, res) => {
   }
 };
 
+export const userDataBasic = async (req, res) => {
+  try {
+    const userId = req.userId;
+    if (!userId) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+    const user = await userModel
+      .findById(userId)
+      .select(" -__v -createdAt -updatedAt -password");
+
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "User found",
+      user : {
+        name : user.name,
+        email : user.email,
+        cart : user.cart,
+        userId : _id
+      },
+    });
+  } catch (error) {
+    return res.status(400).json({
+      success: false,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
+    });
+  }
+};
+
 export const validateResetPasswordEmail = async (req, res) => {
   try {
     const email = req.body.email;
