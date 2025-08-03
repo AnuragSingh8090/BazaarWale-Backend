@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./mongodb/database.js";
 import authRouter from "./routes/authRoutes.js";
 import contactRouter from "./routes/contactRoutes.js";
-
+import userRouter from "./routes/userRoutes.js";
 dotenv.config();
 const app = express();
 connectDB();
@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/auth", authRouter);
 app.use("/api", contactRouter);
+app.use('/api/user/auth', userRouter)
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);

@@ -14,7 +14,7 @@ POST /api/auth/register
 }
 
 
-<-- login API (Before Login No Authorization Token Required)--> //Mobile No login Pending
+<-- login API (Before Login No Authorization Token Required)--> 
 
 POST /api/auth/login
 
@@ -54,7 +54,7 @@ GET /api/auth/userdata
 }
 
 
-<-- Reset Password API (Before Login No Authorizatio Token Required)--> //Mobile no Validation is pending
+<-- Reset Password API (Before Login No Authorizatio Token Required)--> 
 
 <-- Step 1 (Validate User Email Id) -->
 POST /api/auth/validateresetpasswordemail
@@ -75,3 +75,38 @@ POST /api/auth/resetpassword
     "email" : "anuragkumar@gmail.com",
     "password" : "test@1234"
 }
+
+<-- Profile Update (After Login and Authorizatio Token Required)--> 
+
+1.> verify user email
+
+POST /api/user/auth/verify-user-email
+{
+    "email" : "anuragkumarsingh154@gmail.com"
+}
+
+2.> verify user email OTP
+
+POST /api/user/auth/verify-user-email-otp
+{
+    "otp" : "283748"
+}
+
+3.> Delete user account 
+
+POST /api/user/auth/delete-user
+{
+    Nothing is required
+}
+
+4.> Manage Two Factor Auth
+POST /api/user/auth/manage-twofactor-auth
+{
+    "twoFactorAuth" : "false"
+}
+
+Frontend Fix notes
+
+1. Fix username length in navbar
+2. Logout user when there is User not registered response
+3. Fix mobile number length in account settings

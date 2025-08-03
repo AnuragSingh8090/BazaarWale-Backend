@@ -114,6 +114,26 @@ const userSchema = new mongoose.Schema(
       type: Date,
       select: false,
     },
+    verifyUserEmailOTP: {
+      type: String,
+      select: false,
+    },
+    verifyUserEmailOTPExpires: {
+      type: Date,
+      select: false,
+    },
+    verifyUserMobileOTP: {
+      type: String,
+      select: false,
+    },
+    verifyUserMobileOTPExpires: {
+      type: Date,
+      select: false,
+    },
+    loginActivity : {
+      type: Boolean,
+      select: false
+    }
   },
   { timestamps: true }
 );
