@@ -3,8 +3,8 @@ import sendEmail from "../emailService/emailSender.js";
 
 export const verifyUserEmail = async (req, res) => {
   try {
-    const userId = req.userId;
-    const { email } = req.body || {};
+    const userId = req.userId || false;
+    const { email } = req.body || false;
     if (!email) {
       return res.status(400).json({
         success: false,
@@ -65,8 +65,8 @@ export const verifyUserEmail = async (req, res) => {
 
 export const verifyUserEmailOTP = async (req, res) => {
   try {
-    const userId = req.userId;
-    const { otp } = req.body || {};
+    const userId = req.userId || false;
+    const { otp } = req.body || false;
 
     if (!otp) {
       return res.status(400).json({
@@ -133,7 +133,7 @@ export const verifyUserEmailOTP = async (req, res) => {
 
 export const deleteUserAccount = async (req, res) => {
   try {
-    const userId = req.userId || {};
+    const userId = req.userId || false;
     if (!userId) {
       return res.status(400).json({
         success: false,
@@ -173,8 +173,9 @@ export const deleteUserAccount = async (req, res) => {
 
 export const manageTwoFactorAuth = async (req, res) => {
   try {
-    const userId = req.userId || {};
-    const {twoFactorAuth} = req.body;
+    const userId = req.userId || false;
+    const { twoFactorAuth } = req.body;
+    console.log(userId ? "Found" : "not Found");
     if (!userId) {
       return res.status(400).json({
         success: false,
@@ -212,9 +213,128 @@ export const manageTwoFactorAuth = async (req, res) => {
       });
     }
     return res.status(400).json({
-        success : false,
-        message:"Nothing changed"
-    })
+      success: false,
+      message: "Nothing changed",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: `Internal server error ${error}`,
+      message: error.message?.split(":").at(-1)?.trim() || "Unexpected error",
+    });
+  }
+};
+
+export const manageLoginActivity = async (req, res) => {
+  try {
+    const userId = req.userId || false;
+    const { loginActivity } = req.body;
+    if (!userId) {
+      return res.status(400).json({
+        success: false,
+        message: "User Id Required",
+      });
+    }
+    if (!loginActivity) {
+      return res.status(400).json({
+        success: false,
+        message: "Login Activity Action Required",
+      });
+    }
+    const user = await userModel.findById(userId);
+
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    if (loginActivity === "true") {
+      user.loginActivity = true;
+      await user.save();
+      return res.status(200).json({
+        success: true,
+        message: "Login Activity Enabled",
+      });
+    } else if (loginActivity === "false") {
+      user.loginActivity = false;
+      await user.save();
+      return res.status(200).json({
+        success: true,
+        message: "Login Activity Disabled",
+      });
+    }
+    return res.status(400).json({
+      success: false,
+      message: "Nothing changed",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: `Internal server error ${error}`,
+      message: error.message?.split(":").at(-1)?.trim() || "Unexpected error",
+    });
+  }
+};
+
+export const updateUserProfile = async (req, res) => {
+  try {
+    if (!req.userId) {
+      return res.status(400).json({
+        success: false,
+        message: "User Id Required",
+      });
+    }
+    const userId = req.userId;
+
+    const { name, gender, mobile, email, isEmailVerified, isMobileVerified } =
+      req.body;
+
+    if (!name || !gender || !mobile || !email) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    if (!["male", "female", "others"].includes(gender)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid Gender",
+      });
+    }
+
+    const emailVerifiedBool =
+      isEmailVerified === true || isEmailVerified === "true";
+    const mobileVerifiedBool =
+      isMobileVerified === true || isMobileVerified === "true";
+
+    const user = await userModel.findById(userId);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    user.name = name;
+    user.gender = gender;
+    user.mobile = mobile;
+    user.email = email;
+    user.isEmailVerified = user.isEmailVerified
+      ? user.isEmailVerified
+      : emailVerifiedBool;
+    user.isMobileVerified = user.isMobileVerified
+      ? user.isMobileVerified
+      : mobileVerifiedBool;
+
+    await user.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Profile updated successfully",
+    });
   } catch (error) {
     return res.status(500).json({
       success: false,

@@ -45,7 +45,7 @@ const userSchema = new mongoose.Schema(
     gender: {
       type: String,
       enum: {
-        values: ["male", "female", "other"],
+        values: ["male", "female", "others"],
         message: "Gender must be either Male, Female, or Other",
       },
     },
@@ -132,7 +132,7 @@ const userSchema = new mongoose.Schema(
     },
     loginActivity : {
       type: Boolean,
-      select: false
+      default: false
     }
   },
   { timestamps: true }

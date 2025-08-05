@@ -147,7 +147,7 @@ export const userData = async (req, res) => {
     }
     const user = await userModel
       .findById(userId)
-      .select(" -__v -createdAt -updatedAt");
+      .select(" -__v -createdAt -updatedAt ");
 
     if (!user) {
       return res.status(400).json({
