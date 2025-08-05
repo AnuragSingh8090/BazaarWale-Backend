@@ -115,9 +115,3 @@ POST /api/user/auth/update-user-profile
 "isEmailVerified" : "false",
 "isMobileVerified" : "false"
 }
-
-Frontend Fix notes
-
-1. Fix username length in navbar
-2. Logout user when there is User not registered response
-3. Fix mobile number length in account settings
