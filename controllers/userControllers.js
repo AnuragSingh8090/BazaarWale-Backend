@@ -115,6 +115,7 @@ export const verifyUserEmailOTP = async (req, res) => {
     }
 
     user.verifyUserEmailOTP = undefined;
+    user.isEmailVerified = true;
     user.verifyUserEmailOTPExpires = undefined;
     await user.save();
 
