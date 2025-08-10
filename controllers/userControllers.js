@@ -1,5 +1,6 @@
 import userModel from "../models/userModel.js";
 import sendEmail from "../emailService/emailSender.js";
+import bcrypt from "bcryptjs";
 
 export const verifyUserEmail = async (req, res) => {
   try {
@@ -336,6 +337,99 @@ export const updateUserProfile = async (req, res) => {
       success: true,
       message: "Profile updated successfully",
     });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: `Internal server error ${error}`,
+      message: error.message?.split(":").at(-1)?.trim() || "Unexpected error",
+    });
+  }
+};
+
+export const changePassword = async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body || false;
+    const userId = req.userId || false;
+
+    if (!userId) {
+      return res.status(400).json({
+        success: false,
+        message: "User Not Found",
+      });
+    }
+
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({
+        success: false,
+        message: "All Fields Required",
+      });
+    }
+
+    if (currentPassword.length < 6 || newPassword.length < 6) {
+      return res.status(400).json({
+        success: false,
+        message: "Password must be greater than 6 characters",
+      });
+    }
+
+    if (!/[A-Z]/.test(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        message: "New password must contain at least one uppercase letter",
+      });
+    }
+
+    if (!/[a-z]/.test(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        message: "New password must contain at least one lowercase letter",
+      });
+    }
+
+    if (!/[0-9]/.test(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        message: "New password must contain at least one number",
+      });
+    }
+
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        message: "New password must contain at least one special character",
+      });
+    }
+    const user = await userModel.findById(userId).select("+password");
+    const isPasswordMatch = await bcrypt.compare(
+      currentPassword,
+      user.password
+    );
+
+    if (!isPasswordMatch) {
+      return res.status(400).json({
+        success: false,
+        message: "Incorrect Password Entered!!",
+      });
+    }
+    
+    const isOldPasswordMatch = await bcrypt.compare(newPassword, user.password)
+    if(isOldPasswordMatch){
+      return res.status(400).json({
+        success: false,
+        message: "Old Password and New Password can not be same",
+      });
+    }
+
+
+    const updatedPassword = await bcrypt.hash(newPassword, 10);
+
+    user.password = updatedPassword;
+    await user.save()
+
+    res.status(200).json({
+      success: true,
+      message : "Password Updated Successfully!!"
+    })
   } catch (error) {
     return res.status(500).json({
       success: false,

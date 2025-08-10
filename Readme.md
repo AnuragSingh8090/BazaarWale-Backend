@@ -115,3 +115,10 @@ POST /api/user/auth/update-user-profile
 "isEmailVerified" : "false",
 "isMobileVerified" : "false"
 }
+
+8.> Change User Password
+POST /api/user/auth/change-password
+{
+    "currentPassword" : "abcd",
+    "newPassword" : "abcd1"
+}
