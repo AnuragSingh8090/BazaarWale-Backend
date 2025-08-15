@@ -120,5 +120,5 @@ POST /api/user/auth/update-user-profile
 POST /api/user/auth/change-password
 {
     "currentPassword" : "abcd",
-    "newPassword" : "abcd1"
+    "newPassword" : ""
 }
