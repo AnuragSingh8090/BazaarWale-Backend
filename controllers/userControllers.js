@@ -177,7 +177,6 @@ export const manageTwoFactorAuth = async (req, res) => {
   try {
     const userId = req.userId || false;
     const { twoFactorAuth } = req.body;
-    console.log(userId ? "Found" : "not Found");
     if (!userId) {
       return res.status(400).json({
         success: false,
