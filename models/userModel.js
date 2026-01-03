@@ -61,10 +61,12 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    address: {
-      type: Array,
-      default: [],
-    },
+    address: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Address", 
+      },
+    ],
     paymentMethod: {
       type: Array,
       default: [],
@@ -130,10 +132,10 @@ const userSchema = new mongoose.Schema(
       type: Date,
       select: false,
     },
-    loginActivity : {
+    loginActivity: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   { timestamps: true }
 );

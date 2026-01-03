@@ -6,7 +6,9 @@ import {
   manageTwoFactorAuth,
   manageLoginActivity,
   updateUserProfile,
-  changePassword
+  changePassword,
+  addNewAddress
+
 } from "../controllers/userControllers.js";
 import { authorization } from "../middlewares/authorization.js";
 
@@ -19,6 +21,7 @@ userRouter.post("/manage-twofactor-auth", authorization, manageTwoFactorAuth);
 userRouter.post("/manage-login-activity", authorization, manageLoginActivity);
 userRouter.post("/update-user-profile", authorization, updateUserProfile);
 userRouter.post("/change-password", authorization, changePassword);
+userRouter.post('/add-address', authorization, addNewAddress)
 
 
 export default userRouter;

@@ -12,6 +12,7 @@ connectDB();
 
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:5174",
   "https://bazaarwale.netlify.app",
 ];
 // Middleware
@@ -27,6 +28,14 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api", contactRouter);
 app.use('/api/user/auth', userRouter)
+
+app.get('/abcd',(req,res)=>{
+   console.log(req)
+
+   console.log(res)
+
+   res.send('Hello World')
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);

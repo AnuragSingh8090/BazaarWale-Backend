@@ -1,5 +1,6 @@
 import userModel from "../models/userModel.js";
 import sendEmail from "../emailService/emailSender.js";
+import addressModel from "../models/addressModel.js";
 import bcrypt from "bcryptjs";
 
 export const verifyUserEmail = async (req, res) => {
@@ -437,3 +438,60 @@ export const changePassword = async (req, res) => {
     });
   }
 };
+
+export const addNewAddress = async (req, res) => {
+  try {
+    const userId = req.userId || false;
+
+    if (!userId) {
+      return res.status(400).json({
+        success: false,
+        message: "User Id Required",
+      });
+    }
+
+ if (!req.body || Object.keys(req.body).length === 0) {
+    return res.status(400).json({
+      success: false,
+      message: "Address Details Required",
+    });
+  }
+
+    const user = await userModel.findById(userId);
+    
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    const userAddresses = await user.populate('address');
+
+    console.log(userAddresses.address)
+
+    // STEP 1: Create new address document first
+    const newAddress = new addressModel(req.body);
+    const savedAddress = await newAddress.save();
+
+    // STEP 2: Push the address ObjectId to user's address array
+    user.address.push(savedAddress._id);
+    await user.save();
+
+    return res.status(201).json({
+      success: true,
+      message: "New Address Added Successfully",
+      data: {
+        addressId: savedAddress._id,
+        address: savedAddress
+      }
+    });
+  }
+  catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: `Internal server error ${error}`,
+      message: error.message?.split(":").at(-1)?.trim() || "Unexpected error",
+    });
+  }
+} 

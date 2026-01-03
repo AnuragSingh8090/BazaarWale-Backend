@@ -1,5 +1,8 @@
                                                                              <-- API Documentation -->
 
+https://bazaarwale-backend.onrender.com
+
+
 <-- Registration API (Before Login No Authorization Token Required) -->
 
 POST /api/auth/register
@@ -121,4 +124,17 @@ POST /api/user/auth/change-password
 {
     "currentPassword" : "abcd",
     "newPassword" : ""
+}
+
+9.> Add New Address 
+POST /api/user/auth/add-address
+{
+    "name" : "Anurag Rajput",
+    "mobile": "8090674352",
+    "streetDetails" : "160 IRIS House, Sector 51, Gurugram",
+    "city" : "Gurugram",
+    "state" : "Haryana",
+    "postalCode" : "584758",
+    "addressType" : "home",
+    "isDefault":"false"
 }
