@@ -6,7 +6,15 @@ import connectDB from "./mongodb/database.js";
 import authRouter from "./routes/authRoutes.js";
 import contactRouter from "./routes/contactRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import path from "path";
+import { fileURLToPath } from "url";
+import { promises as fs } from "fs";
+
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 connectDB();
 
@@ -15,27 +23,156 @@ const allowedOrigins = [
   "http://localhost:5174",
   "https://bazaarwale.netlify.app",
 ];
-// Middleware
+
+const serverStats = {
+  startTime: Date.now(),
+  logs: [],
+  maxLogs: 100,
+};
+
+const LOGS_FILE_PATH = path.join(__dirname, "public", "logs.json");
+
+/** Load existing logs from file on server start */
+async function loadLogs() {
+  try {
+    const data = await fs.readFile(LOGS_FILE_PATH, "utf-8");
+    const savedData = JSON.parse(data);
+    serverStats.logs = savedData.logs || [];
+    serverStats.startTime = savedData.startTime || Date.now();
+    console.log(`✅ Loaded ${serverStats.logs.length} logs from file`);
+  } catch (error) {
+    console.log("📝 Starting with fresh logs");
+    await saveLogs();
+  }
+}
+
+/** Save logs to file */
+async function saveLogs() {
+  try {
+    const data = {
+      logs: serverStats.logs,
+      startTime: serverStats.startTime,
+      lastUpdated: new Date().toISOString(),
+    };
+    await fs.writeFile(LOGS_FILE_PATH, JSON.stringify(data, null, 2), "utf-8");
+  } catch (error) {
+    console.error("Error saving logs:", error.message);
+  }
+}
+
+loadLogs();
+
 app.use(cors({ credentials: true, origin: allowedOrigins }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("API is Running");
+/** Request logging middleware */
+app.use((req, res, next) => {
+  // Only skip monitoring endpoints and actual static filesf
+  const skipPaths = ['/api/logs', '/api/logs/clear', '/logs.json', '/'];
+  const isStaticFile = req.url.match(/\.(html|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/i);
+  
+  if (skipPaths.includes(req.url) || skipPaths.includes(req.path) || isStaticFile) {
+    return next();
+  }
+  
+  const startTime = Date.now();
+  const originalSend = res.send;
+  let responseBody;
+  
+  res.send = function (data) {
+    const responseTime = Date.now() - startTime;
+    
+    try {
+      responseBody = typeof data === 'string' ? JSON.parse(data) : data;
+    } catch (e) {
+      responseBody = data;
+    }
+    
+    const logEntry = {
+      timestamp: new Date().toLocaleString(),
+      method: req.method,
+      url: req.originalUrl || req.url,
+      statusCode: res.statusCode,
+      responseTime,
+      ip: req.ip || req.connection.remoteAddress,
+      request: {
+        headers: {
+          'user-agent': req.headers['user-agent'],
+          'content-type': req.headers['content-type'],
+          'authorization': req.headers['authorization'] ? 'Bearer ***' : undefined,
+          'accept': req.headers['accept'],
+          'host': req.headers['host'],
+        },
+        body: req.body && Object.keys(req.body).length > 0 ? req.body : undefined,
+      },
+      response: {
+        body: responseBody,
+        cookies: res.getHeader('set-cookie') || undefined,
+      },
+    };
+    
+    serverStats.logs.push(logEntry);
+    if (serverStats.logs.length > serverStats.maxLogs) {
+      serverStats.logs.shift();
+    }
+    
+    saveLogs().catch(err => console.error("Error saving logs:", err.message));
+    
+    return originalSend.call(this, data);
+  };
+  
+  next();
 });
-app.use("/api/auth", authRouter);
-app.use("/api", contactRouter);
-app.use('/api/user/auth', userRouter)
 
-app.get('/abcd',(req,res)=>{
-   console.log(req)
+app.use(express.static(path.join(__dirname, "public")));
 
-   console.log(res)
+/** Server monitoring API endpoints */
+app.get("/api/logs", (req, res) => {
+  res.json({
+    logs: serverStats.logs,
+    serverStartTime: serverStats.startTime,
+    totalRequests: serverStats.logs.length,
+  });
+});
 
-   res.send('Hello World')
-})
+app.post("/api/logs/clear", async (req, res) => {
+  serverStats.logs = [];
+  await saveLogs();
+  res.json({ success: true, message: "Logs cleared" });
+});
+
+app.post("/api/server/stop", (req, res) => {
+  res.json({ success: true, message: "Server shutting down..." });
+  console.log("🛑 Server stop requested from monitor");
+  
+  setTimeout(() => {
+    // Check if running under PM2
+    if (process.env.pm_id) {
+      console.log("Running under PM2, executing pm2 stop...");
+      import('child_process').then(({ exec }) => {
+        exec('npx pm2 stop bazaarwale-backend', (error, stdout, stderr) => {
+          if (error) {
+            console.error(`PM2 stop error: ${error}`);
+            process.exit(0); // Fallback
+          }
+        });
+      });
+    } else {
+      process.exit(0);
+    }
+  }, 1000);
+});
+
+/** Routes */
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "server.html"));
+});
+
+app.use("/api/user/auth", authRouter);
+app.use("/api/user/contact", contactRouter);
+app.use("/api/user/profile", userRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);

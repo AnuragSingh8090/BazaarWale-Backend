@@ -1,0 +1,633 @@
+{
+  "logs": [
+    {
+      "timestamp": "1/4/2026, 4:30:29 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:30:42 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 54,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:33:48 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 3,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:36:30 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:45:27 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:47:28 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:50:18 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:53:06 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:56:01 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 4:57:28 PM",
+      "method": "POST",
+      "url": "/api/server/stop",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Server shutting down..."
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 5:04:42 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 401,
+      "responseTime": 11,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Access token expired. Please refresh your token.",
+          "code": "TOKEN_EXPIRED"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 5:05:19 PM",
+      "method": "POST",
+      "url": "/api/user/auth/login",
+      "statusCode": 200,
+      "responseTime": 233,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        },
+        "body": {
+          "email": "anuragkumarsingh154@gmail.com",
+          "password": "Admin@1234"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Login Successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MjY1MTksImV4cCI6MTc2NzUyNzExOX0.LgG_-qTvtcNfez-AAOi9VqKtqULvxJsl6eUjIwdsmEc",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "userId": "68b44d18e9fc1d4eebb53ac4",
+            "cart": []
+          }
+        },
+        "cookies": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MjY1MTksImV4cCI6MTc2ODEzMTMxOX0.ymYZGNGbZjY-ZH76VCB92J7KPojl3j4pbvfZ8drIiDc; Max-Age=604800; Path=/; Expires=Sun, 11 Jan 2026 11:35:19 GMT; HttpOnly; SameSite=Lax"
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 5:05:24 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 37,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 5:52:36 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 500,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "error": "Internal server error Cannot access 'token' before initialization",
+          "message": "Something went wrong"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:04:23 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 500,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "error": "Internal server error Cannot access 'token' before initialization",
+          "message": "Something went wrong"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:04:26 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 500,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "error": "Internal server error Cannot access 'token' before initialization",
+          "message": "Something went wrong"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:17:29 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 500,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "error": "Internal server error Cannot access 'token' before initialization",
+          "message": "Something went wrong"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:18:17 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 401,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Invalid refresh token"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:18:37 PM",
+      "method": "POST",
+      "url": "/api/user/auth/login",
+      "statusCode": 200,
+      "responseTime": 239,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "content-type": "application/json",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        },
+        "body": {
+          "email": "anuragkumarsingh154@gmail.com",
+          "password": "Admin@1234"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Login Successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzA5MTcsImV4cCI6MTc2NzUzMTUxN30.M6FY6g78424KS91xlrLH6f2sdfaqpNL9gQw_fn-dfoA",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "userId": "68b44d18e9fc1d4eebb53ac4",
+            "cart": []
+          }
+        },
+        "cookies": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzA5MTcsImV4cCI6MTc2ODEzNTcxN30.nRc4z3x_IFATOIfC9ct0WTJIT_NSd3zPU9lf9ZFDGbM; Max-Age=604800; Path=/; Expires=Sun, 11 Jan 2026 12:48:37 GMT; HttpOnly; SameSite=Lax"
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 6:18:40 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 35,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzA5MjAsImV4cCI6MTc2NzUzMTUyMH0.hqyDB_V9jHjI0nHAQ1vlJSNEXvTcxQvEBCy6HJjqw0U"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 8:31:34 PM",
+      "method": "POST",
+      "url": "/api/user/auth/login",
+      "statusCode": 200,
+      "responseTime": 205,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "content-type": "application/json",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        },
+        "body": {
+          "email": "anuragkumarsingh154@gmail.com",
+          "password": "Admin@1234"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Login Successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg4OTQsImV4cCI6MTc2NzUzOTQ5NH0.kWTjTTIaNE0SNf6Q5zZNujU0_lLdNeXJU9WvBIuppVg",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "userId": "68b44d18e9fc1d4eebb53ac4",
+            "cart": []
+          }
+        },
+        "cookies": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg4OTQsImV4cCI6MTc2ODE0MzY5NH0.3zhRcDrb-z6TmQ1q4xjYs0smHi0n3YBuA6nosnWXj3E; Max-Age=604800; Path=/; Expires=Sun, 11 Jan 2026 15:01:34 GMT; HttpOnly; SameSite=Lax"
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 8:31:48 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 41,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg5MDgsImV4cCI6MTc2NzUzOTUwOH0.i2C91fYetXiqgyzgEMa7adfCKwWZJb9T7ZTGbZNtQSQ"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 8:31:50 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 38,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg5MTAsImV4cCI6MTc2NzUzOTUxMH0.-jT-FUvooGDR5CISO_obkvi-txOEG8DIT9nD7mZqcKI"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 8:31:51 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 34,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg5MTEsImV4cCI6MTc2NzUzOTUxMX0.dJvunoYJkl87wKqLe67kQ_tn5DZx5v4-c5SjyISEg2s"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 8:31:52 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 46,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "PostmanRuntime/7.51.0",
+          "accept": "*/*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Mzg5MTIsImV4cCI6MTc2NzUzOTUxMn0.0IV__NG152jC-a2dFyqQNyvk5UiowiirdVCL41jUseU"
+        }
+      }
+    }
+  ],
+  "startTime": 1767510414926,
+  "lastUpdated": "2026-01-04T15:01:52.469Z"
+}

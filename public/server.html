@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Terminal Monitor</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%2360a5fa' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-dasharray='10,5'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23818cf8' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%2360a5fa'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/monitor.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--primary-color)" stroke-width="4" />
+                <circle cx="50" cy="50" r="35" fill="none" stroke="var(--secondary-color)" stroke-width="2"
+                    stroke-dasharray="10,5" />
+                <circle cx="50" cy="50" r="25" fill="none" stroke="var(--accent-color)" stroke-width="2" />
+                <circle cx="50" cy="50" r="8" fill="var(--primary-color)" />
+            </svg>
+            <span class="logo-text">SERVER MONITOR v2.0</span>
+        </div>
+
+        <div class="metrics-header">
+            <div class="metric-item">
+                <span class="metric-label">STATUS</span>
+                <span class="metric-value"><span class="status-dot"></span><span
+                        class="status-text">ONLINE</span></span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-label">SERVER URL</span>
+                <span class="metric-value server-url">
+                    <span id="serverUrl">localhost:3000</span>
+                    <svg class="copy-icon" onclick="copyServerUrl()" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" title="Copy URL">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-label">UPTIME</span>
+                <span class="metric-value" id="uptime">0s</span>
+            </div>
+        </div>
+
+        <div class="server-control">
+            <button id="stop-btn" class="server-btn stop-btn" onclick="stopServer()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+                Force Stop Server
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <span>▶</span>
+                    <span>REQUEST LOGS</span>
+                    <span class="blink">_</span>
+                </div>
+                <div class="terminal-filters">
+                    <select id="statusFilter" class="filter-select" onchange="applyFilters()">
+                        <option value="all">All Status</option>
+                        <option value="success">Success</option>
+                        <option value="200">200 OK</option>
+                        <option value="201">201 Created</option>
+                        <option value="204">204 No Content</option>
+                        <option value="failed">Failed</option>
+                        <option value="400">400 Bad Request</option>
+                        <option value="401">401 Unauthorized</option>
+                        <option value="403">403 Forbidden</option>
+                        <option value="404">404 Not Found</option>
+                        <option value="500">500 Internal Server Error</option>
+                        <option value="502">502 Bad Gateway</option>
+                        <option value="503">503 Service Unavailable</option>
+                    </select>
+                    <select id="methodFilter" class="filter-select" onchange="applyFilters()">
+                        <option value="all">All Methods</option>
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                        <option value="PATCH">PATCH</option>
+                    </select>
+                </div>
+                <div class="terminal-actions">
+                    <button class="action-btn refresh-btn" onclick="refreshLogs()" title="Refresh Data">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+                        </svg>
+                        <span>Refresh</span>
+                    </button>
+                    <button class="action-btn clear-btn" onclick="clearLogs()" title="Clear Logs">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
+                        <span>Clear</span>
+                    </button>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div style="color: var(--text-muted); text-align: center; padding: 20px;">
+                    Waiting for requests...<span class="blink">█</span>
+                </div>
+            </div>
+            <div class="server-info">
+                Server started at: <span id="serverStartTime"></span> | Node.js | Express
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-title">Total Requests</div>
+                <div class="stat-value-large" id="requestCount">0</div>
+                <div class="stat-split">
+                    <div class="stat-split-item success">
+                        <span class="split-label">Success</span>
+                        <span class="split-value" id="successCount">0</span>
+                    </div>
+                    <div class="stat-split-item failed">
+                        <span class="split-label">Failed</span>
+                        <span class="split-value" id="failedCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-title">Average Response Time</div>
+                <div class="stat-value-large" id="avgResponseTime">0<span style="font-size: 1.5rem;">ms</span></div>
+                <div class="stat-subtitle">Across all requests</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-title">Response Time Chart</div>
+                <div class="chart-container" id="chartContainer"></div>
+            </div>
+
+            <div class="stat-card stat-card-flex">
+                <div class="stat-title">Top Endpoints</div>
+                <div class="endpoint-list" id="endpointList">
+                    <div style="color: var(--text-muted); text-align: center; padding: 10px; font-size: 0.8rem;">
+                        No data yet
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/monitor.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,16 @@
 import bcrypt from "bcryptjs";
 import userModel from "../models/userModel.js";
-import jwt from "jsonwebtoken";
-import sendEmail from "../emailService/emailSender.js";
+import sendEmail from "../services/emailService.js";
+import { 
+  generateToken,
+  generateRefreshToken,
+  verifyToken,
+  verifyRefreshToken, 
+  decodeToken, 
+  TOKEN_CONFIG,
+  setRefreshTokenCookie,
+  clearRefreshTokenCookie
+} from "../services/tokenService.js";
 
 export const register = async (req, res) => {
   try {
@@ -38,9 +47,10 @@ export const register = async (req, res) => {
     });
 
     await user.save();
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
-    });
+    
+    // Generate token and refresh token separately
+    const token = generateToken(user._id.toString());
+    const refreshToken = generateRefreshToken(user._id.toString());
 
     const safeUser = await userModel.findOne({email})
 
@@ -53,10 +63,14 @@ export const register = async (req, res) => {
 
      await sendEmail(emailData);
 
+    // Set refresh token in HTTP-only cookie
+    setRefreshTokenCookie(res, refreshToken);
+
+    // Return access token in response (for client to store in localStorage)
     return res.status(201).json({
       success: true,
       message: "User Registered Successfully",
-      token,
+      token, // Client stores this in localStorage
       user: {
         name : safeUser.name,
         email : safeUser.email,
@@ -112,14 +126,15 @@ export const login = async (req, res) => {
       .findById(user._id.toString())
       .select("-password -__v -createdAt -updatedAt");
 
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
-    });
+    const token = generateToken(user._id.toString());
+    const refreshToken = generateRefreshToken(user._id.toString());
+
+    setRefreshTokenCookie(res, refreshToken);
 
     return res.status(200).json({
       success: true,
       message: "Login Successfully",
-      token,
+      token, 
       user: {
         name : safeUser.name,
         email : safeUser.email,
@@ -129,79 +144,6 @@ export const login = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({
-      success: false,
-      error: `Internal server error ${error.message}`,
-      message: "Something went wrong",
-    });
-  }
-};
-
-export const userData = async (req, res) => {
-  try {
-    const userId = req.userId;
-    if (!userId) {
-      return res.status(400).json({
-        success: false,
-        message: "User not found",
-      });
-    }
-    const user = await userModel
-      .findById(userId)
-      .select(" -__v -createdAt -updatedAt ");
-
-    if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "User not found",
-      });
-    }
-
-    return res.status(200).json({
-      success: true,
-      message: "User found",
-      user,
-    });
-  } catch (error) {
-    return res.status(400).json({
-      success: false,
-      error: `Internal server error ${error.message}`,
-      message: "Something went wrong",
-    });
-  }
-};
-
-export const userDataBasic = async (req, res) => {
-  try {
-    const userId = req.userId;
-    if (!userId) {
-      return res.status(400).json({
-        success: false,
-        message: "User not found",
-      });
-    }
-    const user = await userModel
-      .findById(userId)
-      .select(" -__v -createdAt -updatedAt -password");
-
-    if (!user) {
-      return res.status(400).json({
-        success: false,
-        message: "User not found",
-      });
-    }
-
-    return res.status(200).json({
-      success: true,
-      message: "User found",
-      user : {
-        name : user.name,
-        email : user.email,
-        cart : user.cart,
-        userId : user._id
-      },
-    });
-  } catch (error) {
-    return res.status(400).json({
       success: false,
       error: `Internal server error ${error.message}`,
       message: "Something went wrong",
@@ -413,6 +355,51 @@ export const resetPassword = async (req, res) => {
     });
   } catch (error) {
     return res.status(400).json({
+      success: false,
+      error: `Internal server error ${error.message}`,
+      message: "Something went wrong",
+    });
+  }
+};
+
+export const refreshToken = async (req, res) => {
+  try {
+    const token = req.cookies[TOKEN_CONFIG.REFRESH_TOKEN_COOKIE_NAME] || req.body.refreshToken;
+
+    if (!token) {
+      return res.status(400).json({
+        success: false,
+        message: "Refresh token is required",
+      });
+    }
+
+    try {
+      const decoded = verifyRefreshToken(token);
+      const userId = decoded.userId;
+      const newToken = generateToken(userId);
+
+      return res.status(200).json({
+        success: true,
+        message: "Token refreshed successfully",
+        token: newToken,
+      });
+    } catch (error) {
+      if (error.name === "TokenExpiredError") {
+        clearRefreshTokenCookie(res);
+        return res.status(401).json({
+          success: false,
+          message: "Refresh token expired. Please login again.",
+        });
+      } else if (error.name === "JsonWebTokenError") {
+        return res.status(401).json({
+          success: false,
+          message: "Invalid refresh token",
+        });
+      }
+      throw error;
+    }
+  } catch (error) {
+    return res.status(500).json({
       success: false,
       error: `Internal server error ${error.message}`,
       message: "Something went wrong",

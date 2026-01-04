@@ -1,4 +1,4 @@
-import sendEmail from "../emailService/emailSender.js";
+import sendEmail from "../services/emailService.js";
 import contactModel from "../models/contactModel.js";
 import newsletterModel from "../models/newsletterModel.js";
 
