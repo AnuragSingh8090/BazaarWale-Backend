@@ -38,7 +38,8 @@ async function loadLogs() {
     const data = await fs.readFile(LOGS_FILE_PATH, "utf-8");
     const savedData = JSON.parse(data);
     serverStats.logs = savedData.logs || [];
-    serverStats.startTime = savedData.startTime || Date.now();
+    // Always reset startTime on server restart (don't persist uptime)
+    serverStats.startTime = Date.now();
     console.log(`✅ Loaded ${serverStats.logs.length} logs from file`);
   } catch (error) {
     console.log("📝 Starting with fresh logs");

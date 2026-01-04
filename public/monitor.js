@@ -5,7 +5,8 @@ let serverStartTime = 0;
 let expandedLogs = new Set();
 let currentFilters = {
     status: 'all',
-    method: 'all'
+    method: 'all',
+    requestType: 'all' // 'all', 'user', 'server', 'admin'
 };
 
 // Will be updated when server data is fetched
@@ -21,7 +22,7 @@ function copyServerUrl() {
         const copyIcon = document.querySelector('.copy-icon');
         const originalStroke = copyIcon.getAttribute('stroke');
         copyIcon.setAttribute('stroke', 'var(--success-color)');
-        setTimeout(() => {
+        setTimeout(() => {  
             copyIcon.setAttribute('stroke', originalStroke);
         }, 1000);
     }).catch(err => {
@@ -151,10 +152,12 @@ async function startServer() {
 function applyFilters() {
     currentFilters.status = document.getElementById('statusFilter').value;
     currentFilters.method = document.getElementById('methodFilter').value;
+    currentFilters.requestType = document.getElementById('requestTypeFilter').value;
     
     filteredLogs = logs.filter(log => {
         let passStatus = true;
         let passMethod = true;
+        let passRequestType = true;
         
         // Handle status filtering
         if (currentFilters.status === 'success') {
@@ -170,7 +173,19 @@ function applyFilters() {
             passMethod = log.method === currentFilters.method;
         }
         
-        return passStatus && passMethod;
+        // Handle request type filtering - STRICT matching
+        // Only show logs that match the selected type
+        if (currentFilters.requestType !== 'all') {
+            if (currentFilters.requestType === 'user') {
+                passRequestType = log.url.includes('/api/user');
+            } else if (currentFilters.requestType === 'admin') {
+                passRequestType = log.url.includes('/api/admin');
+            } else if (currentFilters.requestType === 'server') {
+                passRequestType = !log.url.includes('/api/user') && !log.url.includes('/api/admin');
+            }
+        }
+        
+        return passStatus && passMethod && passRequestType;
     });
     
     renderLogs();
@@ -199,7 +214,7 @@ async function fetchLogs() {
 function renderLogs() {
     const terminalBody = document.getElementById('terminalBody');
 
-    const logsToDisplay = filteredLogs.length > 0 || currentFilters.status !== 'all' || currentFilters.method !== 'all' ? filteredLogs : logs;
+    const logsToDisplay = filteredLogs.length > 0 || currentFilters.status !== 'all' || currentFilters.method !== 'all' || currentFilters.requestType !== 'all' ? filteredLogs : logs;
 
     if (logsToDisplay.length === 0) {
         terminalBody.innerHTML = `
@@ -552,9 +567,10 @@ async function clearLogs() {
 
 async function refreshLogs() {
     expandedLogs.clear();
-    currentFilters = { status: 'all', method: 'all' };
+    currentFilters = { status: 'all', method: 'all', requestType: 'all' };
     document.getElementById('statusFilter').value = 'all';
     document.getElementById('methodFilter').value = 'all';
+    document.getElementById('requestTypeFilter').value = 'all';
     await fetchLogs();
 }
 

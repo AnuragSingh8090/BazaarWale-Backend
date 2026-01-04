@@ -91,6 +91,12 @@
                         <option value="DELETE">DELETE</option>
                         <option value="PATCH">PATCH</option>
                     </select>
+                    <select id="requestTypeFilter" class="filter-select" onchange="applyFilters()">
+                        <option value="all">All Requests</option>
+                        <option value="user">User</option>
+                        <option value="server">Server</option>
+                        <option value="admin">Admin</option>
+                    </select>
                 </div>
                 <div class="terminal-actions">
                     <button class="action-btn refresh-btn" onclick="refreshLogs()" title="Refresh Data">
