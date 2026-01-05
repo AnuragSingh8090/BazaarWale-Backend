@@ -102,7 +102,7 @@ app.use((req, res, next) => {
         headers: {
           'user-agent': req.headers['user-agent'],
           'content-type': req.headers['content-type'],
-          'authorization': req.headers['authorization'] ? 'Bearer ***' : undefined,
+          'authorization': req.headers['authorization'],
           'accept': req.headers['accept'],
           'host': req.headers['host'],
         },

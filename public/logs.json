@@ -1,200 +1,6 @@
 {
   "logs": [
     {
-      "timestamp": "1/4/2026, 4:30:29 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 1,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:30:42 PM",
-      "method": "GET",
-      "url": "/api/user/profile/userdata",
-      "statusCode": 200,
-      "responseTime": 54,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "authorization": "Bearer ***",
-          "accept": "application/json, text/plain, */*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "User found",
-          "user": {
-            "name": "Anurag Kumar Singh",
-            "profilePicture": "",
-            "email": "anuragkumarsingh154@gmail.com",
-            "mobile": "8090674352",
-            "gender": "male",
-            "loginHistory": [],
-            "isEmailVerified": true,
-            "isMobileVerified": false,
-            "address": [
-              "68b457bbcf02b6311dffddc2",
-              "68b45dfccf02b6311dffddc8",
-              "68b45e2a6289f803f66a3da7",
-              "68b45e5aaebc3f94ee5cf4bc",
-              "68b45e6eaebc3f94ee5cf4c1",
-              "68b45e7bfbeb955939ba6320"
-            ],
-            "paymentMethod": [],
-            "cart": [],
-            "wishlist": [],
-            "orders": [],
-            "twoFactorAuth": true,
-            "loginActivity": true,
-            "userId": "68b44d18e9fc1d4eebb53ac4"
-          }
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:33:48 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 3,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:36:30 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 0,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:45:27 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 1,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:47:28 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 0,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:50:18 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 0,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
-      "timestamp": "1/4/2026, 4:53:06 PM",
-      "method": "POST",
-      "url": "/api/server/stop",
-      "statusCode": 200,
-      "responseTime": 0,
-      "ip": "::1",
-      "request": {
-        "headers": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-          "accept": "*/*",
-          "host": "localhost:3000"
-        }
-      },
-      "response": {
-        "body": {
-          "success": true,
-          "message": "Server shutting down..."
-        }
-      }
-    },
-    {
       "timestamp": "1/4/2026, 4:56:01 PM",
       "method": "POST",
       "url": "/api/server/stop",
@@ -759,8 +565,2179 @@
         },
         "cookies": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzkxNDIsImV4cCI6MTc2ODE0Mzk0Mn0.pxrjsHqO6oNwYzQQ_NPFU1UjgNKvI8ACti3erkYa2qc; Max-Age=604800; Path=/; Expires=Sun, 11 Jan 2026 15:05:42 GMT; HttpOnly; SameSite=Lax"
       }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:28 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 42,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDU5NjgsImV4cCI6MTc2NzU0NjU2OH0.7PGTi-XXEJxO_28sV4XZXEy3PJhg-5g3DT1SNYwVv2o"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:28 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 39,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:29 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 74,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:32 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 37,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:35 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 39,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:39 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 38,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:39 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 41,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:43 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 36,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:43 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 45,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:29:51 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 36,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:36:42 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 41,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:38:56 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 42,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:40:12 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 34,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Access token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDY2MTIsImV4cCI6MTc2NzU0NzIxMn0.a-EwjvgoVIcMN8gAU2r-EBkEA4gsEcnJyl1GA_xZMS8"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:40:12 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 38,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:43:52 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 32,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:44:16 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 39,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer ***",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:46:04 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 49,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDY2MTIsImV4cCI6MTc2NzU0NzIxMn0.a-EwjvgoVIcMN8gAU2r-EBkEA4gsEcnJyl1GA_xZMS8",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:46:17 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 46,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDY2MTIsImV4cCI6MTc2NzU0NzIxMn0.a-EwjvgoVIcMN8gAU2r-EBkEA4gsEcnJyl1GA_xZMS8",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:51:31 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 2,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDY2MTIsImV4cCI6MTc2NzU0NzIxMn0.a-EwjvgoVIcMN8gAU2r-EBkEA4gsEcnJyl1GA_xZMS8",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:51:31 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 36,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:51:33 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 37,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:52:09 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 31,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:53:37 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 48,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:54:07 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 83,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:57:07 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 32,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:59:46 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 47,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 10:59:53 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 42,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 11:00:16 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 36,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 11:00:31 PM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 2,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDcyOTEsImV4cCI6MTc2NzU0Nzg5MX0.I2JIhKAA8_euNaR-5saMckG2_OR7-a-oMJIx3rFu82k",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDc4MzEsImV4cCI6MTc2NzU0ODQzMX0.PXVsFfRNSzp-0rtW9h5uD7Ozk1a35mgqB-0e1iU0DS4"
+        }
+      }
+    },
+    {
+      "timestamp": "1/4/2026, 11:01:02 PM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 35,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDc4MzEsImV4cCI6MTc2NzU0ODQzMX0.PXVsFfRNSzp-0rtW9h5uD7Ozk1a35mgqB-0e1iU0DS4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 6:42:30 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 11,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NDc4MzEsImV4cCI6MTc2NzU0ODQzMX0.PXVsFfRNSzp-0rtW9h5uD7Ozk1a35mgqB-0e1iU0DS4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzU1NTAsImV4cCI6MTc2NzU3NjE1MH0.ZkDHqsjDSu59XpJYYvN6jZY56P2-O3Z2zkgTbpjR_VY"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 6:42:32 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 1485,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzU1NTAsImV4cCI6MTc2NzU3NjE1MH0.ZkDHqsjDSu59XpJYYvN6jZY56P2-O3Z2zkgTbpjR_VY",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 6:53:52 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzU1NTAsImV4cCI6MTc2NzU3NjE1MH0.ZkDHqsjDSu59XpJYYvN6jZY56P2-O3Z2zkgTbpjR_VY",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 6:53:52 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 255,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:05:14 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzYyMzIsImV4cCI6MTc2NzU3NjgzMn0.cn9aqkG31oP7MkapzDeUF3vmRdQ-pHr0JCudSEgWfL4",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 3,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 276,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:08:46 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 2,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 37,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcxMjYsImV4cCI6MTc2NzU3NzcyNn0.mjzZiZe_a3ue9EuyZXm5ALLkYr5fJ5RNlCxqbMTmYkM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:11:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 40,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:19 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1NzcyNzksImV4cCI6MTc2NzU3Nzg3OX0.RC94_DbFPdiCQqX_IklaFZZljb2L1Xe3YxdyMFPtRHE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:19 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 34,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 2,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc1NzksImV4cCI6MTc2NzU3ODE3OX0._gmmRwwahYRxqKNxQEP_0_1MsM-jVJZ_Lb6LIwx3V4s",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:45 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 34,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:45 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:45 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 1,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDMsImV4cCI6MTc2NzU3ODIwM30.rJRPIEI_BMkYeZxwqqgq3X-ID0n4zuoR_gAoidmenqM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:16:45 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 42,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 3,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "POST",
+      "url": "/api/user/auth/refresh-token",
+      "statusCode": 200,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "content-type": "application/json",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc2MDUsImV4cCI6MTc2NzU3ODIwNX0.gIokfHbr9DOihRRuXbDIogXFS8ynWtHryw3_3BBQ2xE",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "Token refreshed successfully",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:18:58 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 401,
+      "responseTime": 0,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": false,
+          "message": "Session expired. Please login again.",
+          "code": "REFRESH_TOKEN_NOT_FOUND"
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:19:16 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 34,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:19:16 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 66,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzkxNDIsImV4cCI6MTc2ODE0Mzk0Mn0.pxrjsHqO6oNwYzQQ_NPFU1UjgNKvI8ACti3erkYa2qc",
+            "refreshTokenExpires": "2026-01-11T15:05:42.899Z",
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:19:29 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdatabasic",
+      "statusCode": 200,
+      "responseTime": 38,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "email": "anuragkumarsingh154@gmail.com",
+            "cart": [],
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:19:29 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 32,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzkxNDIsImV4cCI6MTc2ODE0Mzk0Mn0.pxrjsHqO6oNwYzQQ_NPFU1UjgNKvI8ACti3erkYa2qc",
+            "refreshTokenExpires": "2026-01-11T15:05:42.899Z",
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:19:43 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 39,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzkxNDIsImV4cCI6MTc2ODE0Mzk0Mn0.pxrjsHqO6oNwYzQQ_NPFU1UjgNKvI8ACti3erkYa2qc",
+            "refreshTokenExpires": "2026-01-11T15:05:42.899Z",
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "1/5/2026, 7:20:13 AM",
+      "method": "GET",
+      "url": "/api/user/profile/userdata",
+      "statusCode": 200,
+      "responseTime": 54,
+      "ip": "::1",
+      "request": {
+        "headers": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+          "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1Nzc3MzgsImV4cCI6MTc2NzU3ODMzOH0.NN52mc20TTkcsIvsVWVxGcFRqJ-7KmMtCfVNZzY59PM",
+          "accept": "application/json, text/plain, */*",
+          "host": "localhost:3000"
+        }
+      },
+      "response": {
+        "body": {
+          "success": true,
+          "message": "User found",
+          "user": {
+            "name": "Anurag Kumar Singh",
+            "profilePicture": "",
+            "email": "anuragkumarsingh154@gmail.com",
+            "mobile": "8090674352",
+            "gender": "male",
+            "loginHistory": [],
+            "isEmailVerified": true,
+            "isMobileVerified": false,
+            "address": [
+              "68b457bbcf02b6311dffddc2",
+              "68b45dfccf02b6311dffddc8",
+              "68b45e2a6289f803f66a3da7",
+              "68b45e5aaebc3f94ee5cf4bc",
+              "68b45e6eaebc3f94ee5cf4c1",
+              "68b45e7bfbeb955939ba6320"
+            ],
+            "paymentMethod": [],
+            "cart": [],
+            "wishlist": [],
+            "orders": [],
+            "twoFactorAuth": true,
+            "loginActivity": true,
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGI0NGQxOGU5ZmMxZDRlZWJiNTNhYzQiLCJpYXQiOjE3Njc1MzkxNDIsImV4cCI6MTc2ODE0Mzk0Mn0.pxrjsHqO6oNwYzQQ_NPFU1UjgNKvI8ACti3erkYa2qc",
+            "refreshTokenExpires": "2026-01-11T15:05:42.899Z",
+            "userId": "68b44d18e9fc1d4eebb53ac4"
+          }
+        }
+      }
     }
   ],
-  "startTime": 1767510414926,
-  "lastUpdated": "2026-01-04T15:05:42.935Z"
+  "startTime": 1767546943271,
+  "lastUpdated": "2026-01-05T01:50:13.714Z"
 }
