@@ -71,26 +71,26 @@ app.use(cookieParser());
 /** Request logging middleware */
 app.use((req, res, next) => {
   // Only skip monitoring endpoints and actual static filesf
-  const skipPaths = ['/api/logs', '/api/logs/clear', '/logs.json', '/'];
+  const skipPaths = ['/api/logs', '/api/logs/clear', '/logs.json', '/', '/monitor', '/monitor/auth'];
   const isStaticFile = req.url.match(/\.(html|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/i);
-  
+
   if (skipPaths.includes(req.url) || skipPaths.includes(req.path) || isStaticFile) {
     return next();
   }
-  
+
   const startTime = Date.now();
   const originalSend = res.send;
   let responseBody;
-  
+
   res.send = function (data) {
     const responseTime = Date.now() - startTime;
-    
+
     try {
       responseBody = typeof data === 'string' ? JSON.parse(data) : data;
     } catch (e) {
       responseBody = data;
     }
-    
+
     const logEntry = {
       timestamp: new Date().toLocaleString(),
       method: req.method,
@@ -107,23 +107,24 @@ app.use((req, res, next) => {
           'host': req.headers['host'],
         },
         body: req.body && Object.keys(req.body).length > 0 ? req.body : undefined,
+        cookies: req.cookies && Object.keys(req.cookies).length > 0 ? req.cookies : undefined,
       },
       response: {
         body: responseBody,
         cookies: res.getHeader('set-cookie') || undefined,
       },
     };
-    
+
     serverStats.logs.push(logEntry);
     if (serverStats.logs.length > serverStats.maxLogs) {
       serverStats.logs.shift();
     }
-    
+
     saveLogs().catch(err => console.error("Error saving logs:", err.message));
-    
+
     return originalSend.call(this, data);
   };
-  
+
   next();
 });
 
@@ -147,7 +148,7 @@ app.post("/api/logs/clear", async (req, res) => {
 app.post("/api/server/stop", (req, res) => {
   res.json({ success: true, message: "Server shutting down..." });
   console.log("🛑 Server stop requested from monitor");
-  
+
   setTimeout(() => {
     // Check if running under PM2
     if (process.env.pm_id) {
@@ -166,15 +167,65 @@ app.post("/api/server/stop", (req, res) => {
   }, 1000);
 });
 
-/** Routes */
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "server.html"));
-});
+/** Root route - API health check */
 
+
+/** API Routes - Define BEFORE the monitor route */
 app.use("/api/user/auth", authRouter);
 app.use("/api/user/contact", contactRouter);
 app.use("/api/user/profile", userRouter);
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "API is working"
+  });
+});
+/** Monitor Authentication - Always prompt for password, no sessions */
+const blockFrontendAccess = (req, res, next) => {
+  const origin = req.headers.origin;
+
+  // Block frontend apps
+  if (origin && allowedOrigins.includes(origin)) {
+    return res.status(403).json({
+      success: false,
+      message: "Access denied"
+    });
+  }
+
+  next();
+};
+
+/** Monitor Routes - Always show login page, no session persistence */
+app.get("/monitor", blockFrontendAccess, (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "monitor-login.html"));
+});
+
+app.post("/monitor/auth", blockFrontendAccess, (req, res) => {
+  const { username, password } = req.body;
+
+  // Validate credentials against env variables
+  const validUsername = process.env.SERVER_MONITOR_USERNAME;
+  const validPassword = process.env.SERVER_MONITOR_PASS;
+
+  if (!validUsername || !validPassword) {
+    return res.status(500).json({
+      success: false,
+      message: "Server configuration error"
+    });
+  }
+
+  if (username === validUsername && password === validPassword) {
+    // Return the monitor HTML directly
+    return res.sendFile(path.join(__dirname, "public", "server.html"));
+  }
+
+  return res.status(401).json({
+    success: false,
+    message: "Invalid username or password"
+  });
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
+

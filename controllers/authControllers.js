@@ -1,12 +1,12 @@
 import bcrypt from "bcryptjs";
 import userModel from "../models/userModel.js";
 import sendEmail from "../services/emailService.js";
-import { 
+import {
   generateToken,
   generateRefreshToken,
   verifyToken,
-  verifyRefreshToken, 
-  decodeToken, 
+  verifyRefreshToken,
+  decodeToken,
   TOKEN_CONFIG,
   setRefreshTokenCookie,
   clearRefreshTokenCookie
@@ -47,12 +47,12 @@ export const register = async (req, res) => {
     });
 
     await user.save();
-    
+
     // Generate token and refresh token separately
     const token = generateToken(user._id.toString());
     const refreshToken = generateRefreshToken(user._id.toString());
 
-    const safeUser = await userModel.findOne({email})
+    const safeUser = await userModel.findOne({ email })
 
     const emailData = {
       email_id: email,
@@ -61,7 +61,7 @@ export const register = async (req, res) => {
       html: `<b>Hi ${name}, Your account on BazaarWala has been created successfully</b>`,
     };
 
-     await sendEmail(emailData);
+    await sendEmail(emailData);
 
     // Set refresh token in HTTP-only cookie
     setRefreshTokenCookie(res, refreshToken);
@@ -72,10 +72,10 @@ export const register = async (req, res) => {
       message: "User Registered Successfully",
       token, // Client stores this in localStorage
       user: {
-        name : safeUser.name,
-        email : safeUser.email,
-        userId : safeUser._id,
-        cart : safeUser.cart
+        name: safeUser.name,
+        email: safeUser.email,
+        userId: safeUser._id,
+        cart: safeUser.cart
       },
     });
   } catch (error) {
@@ -134,12 +134,12 @@ export const login = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Login Successfully",
-      token, 
+      token,
       user: {
-        name : safeUser.name,
-        email : safeUser.email,
-        userId : safeUser._id,
-        cart : safeUser.cart
+        name: safeUser.name,
+        email: safeUser.email,
+        userId: safeUser._id,
+        cart: safeUser.cart
       },
     });
   } catch (error) {
@@ -253,6 +253,7 @@ export const validateResetPasswordOTP = async (req, res) => {
 
     if (user.resetPasswordOTPExpires < Date.now()) {
       user.resetPasswordOTP = null;
+      user.resetPasswordOTPExpires = null;
       await user.save();
       return res.status(400).json({
         success: false,
@@ -341,7 +342,7 @@ export const resetPassword = async (req, res) => {
     await user.save();
 
     const emailData = {
-      email_id: email,
+      email_id: user.email,
       subject: "Password Changed Successfully",
       text: `Your password has been changed successfully`,
       html: `<p>Your password for <b>BazaarWale</b> has been changed successfully</p>`,
@@ -364,10 +365,10 @@ export const resetPassword = async (req, res) => {
 
 export const refreshToken = async (req, res) => {
   try {
-    const token = req.cookies[TOKEN_CONFIG.REFRESH_TOKEN_COOKIE_NAME] || req.body.refreshToken;
+    const token = req.cookies[TOKEN_CONFIG.REFRESH_TOKEN_COOKIE_NAME];
 
     if (!token) {
-      return res.status(400).json({
+      return res.status(200).json({
         success: false,
         message: "Refresh token is required",
       });
@@ -388,12 +389,12 @@ export const refreshToken = async (req, res) => {
         clearRefreshTokenCookie(res);
         return res.status(401).json({
           success: false,
-          message: "Refresh token expired. Please login again.",
+          message: "Token Expired"
         });
       } else if (error.name === "JsonWebTokenError") {
         return res.status(401).json({
           success: false,
-          message: "Invalid refresh token",
+          message: "Invalid Token"
         });
       }
       throw error;

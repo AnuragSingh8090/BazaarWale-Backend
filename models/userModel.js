@@ -25,16 +25,15 @@ const userSchema = new mongoose.Schema(
       validate: [validator.isEmail, "Please provide a valid email"],
     },
     mobile: {
-      type: String,
-      minlength: [10, "Mobile must be at least 10 characters long"],
-      maxlength: [15, "Mobile must be less than 15 characters long"],
+      type: Number,
       required: [true, "Mobile is required"],
-      trim: true,
       unique: true,
-      validate: [
-        validator.isMobilePhone,
-        "Please provide a valid mobile number",
-      ],
+      validate: {
+        validator: function(v) {
+          return /^\d{10}$/.test(v.toString());
+        },
+        message: "Please provide a valid 10-digit mobile number"
+      },
     },
     password: {
       type: String,

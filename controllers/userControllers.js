@@ -185,7 +185,7 @@ export const verifyUserEmailOTP = async (req, res) => {
       });
     }
 
-    if (user.verifyUserEmailOTP !== otp) {
+    if (user.verifyUserEmailOTP !== Number(otp)) {
       return res.status(400).json({
         success: false,
         message: "Invalid OTP",
@@ -543,8 +543,6 @@ export const addNewAddress = async (req, res) => {
     }
 
     const userAddresses = await user.populate('address');
-
-    console.log(userAddresses.address)
 
     // STEP 1: Create new address document first
     const newAddress = new addressModel(req.body);
